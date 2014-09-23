@@ -1,5 +1,6 @@
 // ---------------------------------------------
-// persistentForm v0.2
+// persistentForm v0.2b
+// relies on jquery.timeago.js for pretty autosave message
 // A jQuery plugin by Nathan Long
 // https://github.com/sleeplessgeek/jquery.persistentForm
 // ---------------------------------------------
@@ -119,16 +120,15 @@
         };
 
         base.updateSaveTimeDisplay = function(date, auto) {
-          var d, description, dateString, timeString;
+          var d, description, timedateString;
           d = date;
 
-          description = auto ? 'Last auto-saved' : 'Last saved';
+          description = auto ? 'Last auto-saved:' : 'Last saved:';
           
           // International-friendly formatting
-          timeString = jQuery.timeago(d.toLocaleTimeString());
-          dateString = jQuery.timeago(d.toLocaleDateString());
+          timedateString = jQuery.timeago(d);
 
-          $(base.options.saveTimeDisplay).html(description + ' ' + timeString  + ' ' + dateString);
+          $(base.options.saveTimeDisplay).html(description + ' ' + timedateString);
         };
 
         base.setButtonState = function(state) {

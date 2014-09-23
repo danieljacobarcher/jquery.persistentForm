@@ -11,6 +11,7 @@ PersistentForm is a plugin to make your forms auto-save using AJAX prior to fina
 - You don't need to validate until final submission - you're just trying to keep your users from losing work along the way
 - You want your user to be able to save on demand
 - You like speed
+- This version REQUIRES 'timeago: a jQuery plugin'
 
 ## Basic Usage
 

@@ -125,8 +125,8 @@
           description = auto ? 'Last auto-saved' : 'Last saved';
           
           // International-friendly formatting
-          timeString = d.toLocaleTimeString();
-          dateString = d.toLocaleDateString();
+          timeString = jQuery.timeago(d.toLocaleTimeString());
+          dateString = jQuery.timeago(d.toLocaleDateString());
 
           $(base.options.saveTimeDisplay).html(description + ' ' + timeString  + ' ' + dateString);
         };
